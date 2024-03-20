@@ -1,6 +1,6 @@
-# base-pw-py-qa
+# Estrutura base de Automação com Playwright e Python
 
-O Tamplete utilizando Python, Pytest, Playwight, Allure e Faker para realizar testes web e api.
+O Template utilizando Python, Pytest, Playwight, Allure e Faker para realizar testes web e api.
 
 ## Recursos e Tecnologias Utilizadas
 
