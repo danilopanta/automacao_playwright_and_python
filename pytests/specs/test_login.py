@@ -12,8 +12,10 @@ from playwright.sync_api import Page
 
 @pytest.mark.login_orbia_br
 def test_login_site_orbia(page: Page):
+    with allure.step("Acessar Site Orbia"):
+        Login.access_orbia_site_br(page)
     with allure.step("Aceitar os cookies"):
-        Login.test_aceitar_cookies(page)
+        Login.accept_cookies(page)
     with allure.step("Selecionar a opçao de login"):
         Login.access_login_page_br(page)
     with allure.step("Realizar login orbia"):
