@@ -14,6 +14,7 @@ def test_aceitar_cookies(page:Page):
     Login.access_orbia_site_br(page)
     Login.accept_cookies(page)
 
+@pytest.mark.login_orbia
 def login_site_orbia(page: Page):
     Login.access_login_page_br(page)
     Login.fill_login_orbia(page)
