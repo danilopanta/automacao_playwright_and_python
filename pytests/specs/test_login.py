@@ -5,15 +5,18 @@
 # Clicar no botão Login
 # Verificar se foi realizado login corretamente
 
+import allure
 import pytest
 from pytests.pages.login_page import Login
 from playwright.sync_api import Page
 
-@pytest.mark.acess_cookies
-def test_aceitar_cookies(page:Page):
-    Login.access_orbia_site_br(page)
-    Login.accept_cookies(page)
-
-def login_site_orbia(page: Page):
-    Login.access_login_page_br(page)
-    Login.fill_login_orbia(page)
+@pytest.mark.login_orbia_br
+def test_login_site_orbia(page: Page):
+    with allure.step("Aceitar os cookies"):
+        Login.test_aceitar_cookies(page)
+    with allure.step("Selecionar a opçao de login"):
+        Login.access_login_page_br(page)
+    with allure.step("Realizar login orbia"):
+        Login.fill_login_orbia(page)
+    with allure.step("Verificar se foi realizado o Login"):
+        Login.validate_login_orbia(page)
