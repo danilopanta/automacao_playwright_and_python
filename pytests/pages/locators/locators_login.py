@@ -14,7 +14,10 @@ class LocatorsLogin:
             return page.locator("xpath=//input[@id='loginEmail']")
         
         def field_password(page):
-            return page.locator("//input[@id='password']")
+            return page.locator("xpath=//input[@id='password']")
         
         def btn_access_orbia(page):
-            return page.locator("//button[@id='login']")
+            return page.locator("xpath=//button[@id='login']")
+        
+        def user_logged(page):
+            return page.locator("xpath=//input[@id='isUserLogged']")
