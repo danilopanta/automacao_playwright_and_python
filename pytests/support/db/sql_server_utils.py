@@ -8,7 +8,7 @@ class SqlServerUtils:
     def connection_sql_server(params):
         try:
             connection_string = (
-                f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+                f"DRIVER={{SQL Server}};"
                 f"SERVER={params['host']},{params['port']};"
                 f"DATABASE={params['database']};"
                 f"UID={params['user']};"
